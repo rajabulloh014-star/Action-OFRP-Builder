@@ -32,7 +32,7 @@ jobs:
     env:
       SYNC_URL: https://github.com/AERA-Recovery/android_manifest.git
       MANIFEST_BRANCH: "aera-16.0"
-      DEVICE_TREE_URL: https://github.com/rajabulloh014-star/ofox_device_xiaomi_zorn/tree/aera-16.0
+      DEVICE_TREE_URL: https://github.com/rajabulloh014-star/ofox_device_xiaomi_zorn
       DEVICE_TREE_BRANCH: ${{ inputs.device_tree_branch }}
       DEVICE_PATH: device/xiaomi/zorn
       DEVICE_NAME: zorn
@@ -117,7 +117,7 @@ jobs:
         /tmp/send_msg.sh "🌲 Cloning device tree for \`${{ env.DEVICE_NAME }}\`..."
         cd ${{ steps.pwd.outputs.workspace-folder }}/${{ env.MANIFEST_BRANCH }}
         mkdir -p ${{ env.DEVICE_PATH }}
-        git clone --depth=1 ${{ env.DEVICE_TREE_URL }} -b ${{ env.DEVICE_TREE_BRANCH }} ./${{ env.DEVICE_PATH }}
+        git clone --depth=1 ${{ env.DEVICE_TREE_URL }}.git -b ${{ env.DEVICE_TREE_BRANCH }} ./${{ env.DEVICE_PATH }}
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Get latest device tree commit
