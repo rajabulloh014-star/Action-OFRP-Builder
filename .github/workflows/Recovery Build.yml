@@ -32,11 +32,11 @@ jobs:
     env:
       SYNC_URL: https://github.com/AERA-Recovery/android_manifest.git
       MANIFEST_BRANCH: "aera-16.0"
-      DEVICE_TREE_URL: https://github.com/AzzyC/android_device_xiaomi_peridot-AERA
+      DEVICE_TREE_URL: https://github.com/rajabulloh014-star/ofox_device_xiaomi_zorn/tree/aera-16.0
       DEVICE_TREE_BRANCH: ${{ inputs.device_tree_branch }}
-      DEVICE_PATH: device/xiaomi/peridot
-      DEVICE_NAME: peridot
-      MAKEFILE_NAME: twrp_peridot-bp2a-eng
+      DEVICE_PATH: device/xiaomi/zorn
+      DEVICE_NAME: zorn
+      MAKEFILE_NAME: twrp_zorn-bp2a-eng
       BUILD_TARGET: recovery
       TELEGRAM_CHAT_ID: ${{ inputs.notification_mode == 'quiet' && '-1002917930475' || '-1001480977582' }}
       TZ: Europe/London
